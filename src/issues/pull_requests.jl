@@ -30,6 +30,7 @@ mutable struct PullRequest <: GitHubType
     mergeable::Union{Bool, Nothing}
     merged::Union{Bool, Nothing}
     locked::Union{Bool, Nothing}
+    labels::Union{Vector, Nothing}
 end
 
 PullRequest(data::Dict) = json2github(PullRequest, data)
